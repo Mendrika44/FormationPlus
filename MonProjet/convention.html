@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lettre de convention</title>
+    <link rel="stylesheet" href="style1.css">
+
+   
+
+</head>
+<body>
+    <form action="conv.php" method="post">
+        <fieldset>
+            <legend>CONVENTION DES ETUDIANTS</legend>
+        <label>Nom</label><input type="text" required name=nom placeholder="Entrer votre nom"/><br>
+        <label>Prenom</label><input type="text" required name=prenom placeholder="Entrer votre prenom"/><br>
+        <label>NombredHeure</label><input type="number" required name="nombre_dheure" placeholder=""/><br>
+        
+        <label>Formation</label>
+	  	    	<select name="Formation" id=Formation>
+	  	    	<option value="Administration">Administration</option>
+	  	    	<option value="Alimentation et tourisme">Alimentation et tourisme</option>
+	  	    	<option value="Bois et matériaux connexes">Bois et matériaux connexes</option>
+                <option value="Bâtimentet travaux publics">Bâtimentet travaux publics</option>
+                <option value="Entretien d\'équipement motorisé">Entretien d\'équipement motorisé</option>
+                <option value="Fabrication mécanique">Fabrication mécanique</option>
+                <option value="Communications et documentation">Communications et documentation</option>
+                <option value="Mécanique d\'entretien">Mécanique d\'entretien</option>
+                <option value="Métallurgie">Métallurgie</option>
+                <option value="Santé">Santé</option>
+            
+            </select>
+
+
+        
+        <button type="submit" name="valider">VALIDER</button>
+        </fieldset>
+        
+    </form>
+</body>
+</html>
