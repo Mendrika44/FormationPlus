@@ -4,20 +4,23 @@ $username = "root";
 $password = "";
 $database = "formationplus";
 
+$connection = new mysqli($servername, $username, $password, $database);
+
 if(isset($_POST["id"]) && !empty($_POST["id"])){
     
     require_once "index.php";
     
     $sql = "DELETE FROM etudiants WHERE id = ?";
     
-    if($stmt = mysqli_prepare($link, $sql)){
+    
+    if($stmt = mysqli_prepare($connection, $sql)){
         mysqli_stmt_bind_param($stmt, "i", $param_id);
         
         $param_id = trim($_POST["id"]);
         
         if(mysqli_stmt_execute($stmt)){
         
-            header("location: /monprojet/index.php");
+            header('location: /monprojet/index.php' );
             exit();
         } else{
             echo "Oops! une erreur est survenue.";
